@@ -47,6 +47,10 @@ module G5IntegrationsValidations::SiteLinkInventoryValidations
       end,
     })
     validates :cta_reserve_url, presence: true
+    validates(:cta_quote_url, {
+      presence: true,
+      if: -> (o) { o.unit_availability_cta_below_threshold == "quote" },
+    })
     validates(:unit_availability_cta_in_and_above_threshold, {
       presence: true,
       inclusion: {in: CTAS_FOR_IN_AND_ABOVE_THRESHOLD}
