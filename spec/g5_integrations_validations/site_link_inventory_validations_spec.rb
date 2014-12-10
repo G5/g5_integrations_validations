@@ -106,19 +106,10 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
   describe "in-store rate basis" do
     it do
       is_expected.to validate_inclusion_of(:in_store_rate_basis).
-        in_array(%w(push_rate standard_rate calculated_from_web_rate)).
-        allow_nil(true)
+        in_array(%w(push_rate standard_rate calculated_from_web_rate))
     end
 
-    context "web_rate_basis is not set" do
-      subject { SiteLinkInventory.new(web_rate_basis: nil) }
-      it { is_expected.to validate_presence_of(:in_store_rate_basis) }
-    end
-
-    context "web_rate_basis is set" do
-      subject { SiteLinkInventory.new(web_rate_basis: "standard_rate") }
-      it { is_expected.to_not validate_presence_of(:in_store_rate_basis) }
-    end
+    it { is_expected.to validate_presence_of(:in_store_rate_basis) }
 
     context "web_rate_basis is calculated_from_in_store_rate" do
       subject do

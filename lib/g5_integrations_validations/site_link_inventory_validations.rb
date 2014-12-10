@@ -35,11 +35,10 @@ module G5IntegrationsValidations::SiteLinkInventoryValidations
       end,
     })
     validates(:in_store_rate_basis, {
+      presence: true,
       inclusion: {in: VALID_IN_STORE_RATE_BASES},
-      allow_nil: true,
     })
     validates(:in_store_rate_basis, {
-      presence: true,
       exclusion: %w(calculated_from_web_rate),
       if: -> (o) do
         o.web_rate_basis == 'calculated_from_in_store_rate' ||
