@@ -39,7 +39,8 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
       end
       it { is_expected.to validate_presence_of(:web_rate_discount) }
       it do
-        is_expected.to validate_inclusion_of(:web_rate_discount).in_range(0..100)
+        is_expected.to validate_numericality_of(:web_rate_discount).
+          is_greater_than_or_equal_to(0).is_less_than_or_equal_to(100)
       end
     end
 
