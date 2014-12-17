@@ -27,7 +27,10 @@ module G5IntegrationsValidations::SiteLinkInventoryValidations
     })
     validates(:web_rate_basis, {
       presence: true,
-      exclusion: %w(calculated_from_in_store_rate),
+      exclusion: {
+        in: %w(calculated_from_in_store_rate),
+        message: "cannot be the in-store rate because the in-store rate is not set or is based on the web rate",
+      },
       if: -> (o) do
         o.in_store_rate_basis == 'calculated_from_web_rate' ||
           o.in_store_rate_basis.nil?
@@ -35,10 +38,13 @@ module G5IntegrationsValidations::SiteLinkInventoryValidations
     })
     validates(:in_store_rate_basis, {
       presence: true,
-      inclusion: {in: VALID_IN_STORE_RATE_BASES},
+      inclusion: VALID_IN_STORE_RATE_BASES,
     })
     validates(:in_store_rate_basis, {
-      exclusion: %w(calculated_from_web_rate),
+      exclusion: {
+        in: %w(calculated_from_web_rate),
+        message: "cannot be the web rate because the web rate is not set or is based on the in-store rate",
+      },
       if: -> (o) do
         o.web_rate_basis == 'calculated_from_in_store_rate' ||
           o.web_rate_basis.nil?

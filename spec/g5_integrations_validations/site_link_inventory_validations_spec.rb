@@ -76,7 +76,8 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
 
       it do
         is_expected.to validate_exclusion_of(:web_rate_basis).
-          in_array(%w(calculated_from_in_store_rate))
+          in_array(%w(calculated_from_in_store_rate)).
+          with_message("cannot be the in-store rate because the in-store rate is not set or is based on the web rate")
       end
 
       it { is_expected.to validate_presence_of(:web_rate_basis) }
@@ -87,7 +88,8 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
 
       it do
         is_expected.to validate_exclusion_of(:web_rate_basis).
-          in_array(%w(calculated_from_in_store_rate))
+          in_array(%w(calculated_from_in_store_rate)).
+          with_message("cannot be the in-store rate because the in-store rate is not set or is based on the web rate")
       end
     end
 
@@ -118,7 +120,8 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
 
       it do
         is_expected.to validate_exclusion_of(:in_store_rate_basis).
-          in_array(%w(calculated_from_web_rate))
+          in_array(%w(calculated_from_web_rate)).
+          with_message("cannot be the web rate because the web rate is not set or is based on the in-store rate")
       end
 
       it  { is_expected.to validate_presence_of(:in_store_rate_basis) }
@@ -129,7 +132,8 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
 
       it do
         is_expected.to validate_exclusion_of(:in_store_rate_basis).
-          in_array(%w(calculated_from_web_rate))
+          in_array(%w(calculated_from_web_rate)).
+          with_message("cannot be the web rate because the web rate is not set or is based on the in-store rate")
       end
     end
 
