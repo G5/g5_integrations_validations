@@ -18,7 +18,6 @@ module G5IntegrationsValidations::SiteLinkInventoryValidations
       if: -> (o) { o.in_store_rate_basis == 'calculated_from_web_rate' },
     })
     validates(:web_rate_discount, {
-      presence: true,
       numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 100},
       if: -> (o) { o.web_rate_basis == 'calculated_from_in_store_rate' },
     })
