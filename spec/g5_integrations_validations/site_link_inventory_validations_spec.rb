@@ -23,7 +23,12 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
     end
 
     context "is not calculated from web rate" do
-      subject { SiteLinkInventory.new(in_store_rate_basis: 'push_rate') }
+      let(:in_store_rate_basis) do
+        described_class::VALID_IN_STORE_RATE_BASES.reject do |basis|
+          basis == "calculated_from_web_rate"
+        end.sample
+      end
+      subject { SiteLinkInventory.new(in_store_rate_basis: in_store_rate_basis) }
       it { is_expected.not_to validate_presence_of(:in_store_rate_percentage) }
       it do
         is_expected.not_to validate_numericality_of(:in_store_rate_percentage).
@@ -44,7 +49,12 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
     end
 
     context "is not calculated from in-store rate" do
-      subject { SiteLinkInventory.new(web_rate_basis: 'push_rate') }
+      let(:web_rate_basis) do
+        described_class::VALID_WEB_RATE_BASES.reject do |basis|
+          basis == "calculated_from_in_store_rate"
+        end.sample
+      end
+      subject { SiteLinkInventory.new(web_rate_basis: web_rate_basis) }
       it { is_expected.not_to  validate_presence_of(:web_rate_discount) }
       it do
         is_expected.not_to validate_inclusion_of(:web_rate_discount).in_range(0..100)
@@ -59,13 +69,18 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
     end
 
     context "in_store_rate_basis is set" do
-      subject { SiteLinkInventory.new(in_store_rate_basis: "standard_rate") }
+      let(:in_store_rate_basis) do
+        described_class::VALID_IN_STORE_RATE_BASES.reject do |basis|
+          basis == "calculated_from_web_rate"
+        end.sample
+      end
+      subject { SiteLinkInventory.new(in_store_rate_basis: in_store_rate_basis) }
       it { is_expected.to_not validate_presence_of(:web_rate_basis) }
     end
 
     it do
       is_expected.to validate_inclusion_of(:web_rate_basis).
-        in_array(%w(push_rate standard_rate calculated_from_in_store_rate)).
+        in_array(described_class::VALID_WEB_RATE_BASES).
         allow_nil(true)
     end
 
@@ -94,9 +109,12 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
     end
 
     context "in_store_rate_basis is not calculated_from_web_rate" do
-      subject do
-        SiteLinkInventory.new(in_store_rate_basis: "push_rate")
+      let(:in_store_rate_basis) do
+        described_class::VALID_IN_STORE_RATE_BASES.reject do |basis|
+          basis == "calculated_from_web_rate"
+        end.sample
       end
+      subject { SiteLinkInventory.new(in_store_rate_basis: in_store_rate_basis) }
 
       it do
         is_expected.to_not validate_exclusion_of(:web_rate_basis).
@@ -108,7 +126,7 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
   describe "in-store rate basis" do
     it do
       is_expected.to validate_inclusion_of(:in_store_rate_basis).
-        in_array(%w(push_rate standard_rate calculated_from_web_rate))
+        in_array(described_class::VALID_IN_STORE_RATE_BASES)
     end
 
     it { is_expected.to validate_presence_of(:in_store_rate_basis) }
@@ -138,9 +156,12 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
     end
 
     context "web_rate_basis is not calculated_from_in_store_rate" do
-      subject do
-        SiteLinkInventory.new(web_rate_basis: "push_rate")
+      let(:web_rate_basis) do
+        described_class::VALID_WEB_RATE_BASES.reject do |basis|
+          basis == "calculated_from_in_store_rate"
+        end.sample
       end
+      subject { SiteLinkInventory.new(web_rate_basis: web_rate_basis) }
 
       it do
         is_expected.to_not validate_exclusion_of(:in_store_rate_basis).
