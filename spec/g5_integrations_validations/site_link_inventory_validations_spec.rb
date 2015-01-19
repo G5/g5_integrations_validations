@@ -10,23 +10,9 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
   end
   it { is_expected.to validate_presence_of(:unit_availability_threshold) }
 
+  it { is_expected.to validate_presence_of(:cta_quote_url) }
+  it { is_expected.to validate_presence_of(:cta_rent_now_url) }
   it { is_expected.to validate_presence_of(:cta_reserve_url) }
-
-  context "cta_reserve_url" do
-    context "unit_availability_cta_below_threshold is not quote" do
-      subject do
-        SiteLinkInventory.new(unit_availability_cta_below_threshold: "reserve")
-      end
-      it { is_expected.to_not validate_presence_of(:cta_quote_url) }
-    end
-
-    context "unit_availability_cta_below_threshold is quote" do
-      subject do
-        SiteLinkInventory.new(unit_availability_cta_below_threshold: "quote")
-      end
-      it { is_expected.to validate_presence_of(:cta_quote_url) }
-    end
-  end
 
   it do
     is_expected.
