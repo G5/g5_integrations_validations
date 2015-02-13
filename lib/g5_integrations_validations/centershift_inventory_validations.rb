@@ -12,7 +12,7 @@ module G5IntegrationsValidations
     ]
     VALID_IN_STORE_RATE_BASES = VALID_RATE_BASES + ['calculated_from_web_rate']
     VALID_WEB_RATE_BASES = VALID_RATE_BASES + ['calculated_from_in_store_rate']
-    CTAS_THRESHOLD_OPTIONS = %w(soft_reservation hard_reservation quote_only)
+    CTAS_THRESHOLD_OPTIONS = %w(soft_reservation hard_reservation quote)
 
     extend ActiveSupport::Concern
 
@@ -26,7 +26,7 @@ module G5IntegrationsValidations
       validates(
         :cta_hard_reservation_url,
         :cta_soft_reservation_url,
-        :cta_quote_only_reservation_url,
+        :cta_quote_url,
         presence: true
       )
 
