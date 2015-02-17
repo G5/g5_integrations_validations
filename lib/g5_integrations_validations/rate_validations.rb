@@ -35,8 +35,8 @@ module G5IntegrationsValidations
       validates(:web_rate_basis, {
         inclusion: {
           in: g5_integrations_validations_rate_options[:web_rate_bases],
+          allow_blank: true,
         },
-        allow_nil: true,
       })
       validates(:web_rate_basis, {
         presence: true,
@@ -62,7 +62,7 @@ module G5IntegrationsValidations
         },
         if: -> (o) do
           o.web_rate_basis == 'calculated_from_in_store_rate' ||
-            o.web_rate_basis.nil?
+            o.web_rate_basis.blank?
         end,
       })
     end

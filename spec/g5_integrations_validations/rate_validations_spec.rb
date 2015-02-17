@@ -158,6 +158,21 @@ describe G5IntegrationsValidations::RateValidations do
       end
     end
 
+    context "web_rate_basis is blank" do
+      subject do
+        SiteLinkInventory.new(
+          web_rate_basis: "",
+          in_store_rate_basis: "standard_rate"
+        )
+      end
+
+      it do
+        is_expected.to validate_exclusion_of(:in_store_rate_basis).
+          in_array(%w(calculated_from_web_rate)).
+          with_message("cannot be the web rate because the web rate is not set or is based on the in-store rate")
+      end
+    end
+
     context "web_rate_basis is not calculated_from_in_store_rate" do
       let(:web_rate_basis) do
         inventory_validations::VALID_WEB_RATE_BASES.reject do |basis|
