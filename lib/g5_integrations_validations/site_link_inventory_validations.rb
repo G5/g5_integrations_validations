@@ -4,7 +4,7 @@ module G5IntegrationsValidations::SiteLinkInventoryValidations
   VALID_IN_STORE_RATE_BASES = VALID_RATE_BASES + ['calculated_from_web_rate']
   VALID_WEB_RATE_BASES = VALID_RATE_BASES + ['calculated_from_in_store_rate']
   CTAS_FOR_IN_AND_ABOVE_THRESHOLD = %w(quote reserve)
-  CTAS_FOR_IN_AND_ABOVE_THRESHOLD_WITH_RENT_NOW = ['quote', 'reserve', 'rent_now']
+  CTAS_FOR_IN_AND_ABOVE_THRESHOLD_WITH_RENT_NOW = ['quote', 'reserve', 'reserve_fee', 'rent_now']
   CTAS_FOR_BELOW_THRESHOLD = %w(call quote)
 
   extend ActiveSupport::Concern
@@ -21,9 +21,12 @@ module G5IntegrationsValidations::SiteLinkInventoryValidations
     validates(
       :cta_quote_url,
       :cta_rent_now_url,
-      :cta_reserve_url,
       presence: true
     )
+
+    validates_presence_of :cta_reserve_fee_url, :if => lambda { self.cta_reserve_url.blank? }
+    validates_presence_of :cta_reserve_url, :if => lambda { self.cta_reserve_fee_url.blank? }
+
     validates(:unit_availability_cta_in_and_above_threshold, {
       presence: true,
       inclusion: {in: CTAS_FOR_IN_AND_ABOVE_THRESHOLD_WITH_RENT_NOW}
