@@ -12,7 +12,12 @@ module G5IntegrationsValidations
     ]
     VALID_IN_STORE_RATE_BASES = VALID_RATE_BASES + ['calculated_from_web_rate']
     VALID_WEB_RATE_BASES = VALID_RATE_BASES + ['calculated_from_in_store_rate']
-    CTAS_THRESHOLD_OPTIONS = %w(soft_reservation hard_reservation hard_reservation_with_fee quote)
+    CTAS_THRESHOLD_OPTIONS = [
+      "hard_reservation_with_fee",
+      "hard_reservation",
+      "soft_reservation",
+      "quote",
+    ]
 
     extend ActiveSupport::Concern
 
