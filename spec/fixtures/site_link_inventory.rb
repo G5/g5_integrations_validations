@@ -7,7 +7,8 @@ class SiteLinkInventory
   attribute :unit_availability_threshold, Integer
   attribute :in_store_rate_percentage, Float
   attribute :web_rate_discount, Float
-  attribute :cta_reserve_url, Float
+  attribute :cta_reserve_url, String
+  attribute :cta_reserve_fee_url, String
   attribute :cta_quote_url, String
   attribute :cta_rent_now_url, String
   attribute :unit_availability_cta_in_and_above_threshold, String
