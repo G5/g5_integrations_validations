@@ -30,6 +30,12 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
       in_array(%w(call quote))
   end
 
+  it do
+    is_expected.
+      to validate_inclusion_of(:hide_units_if).
+      in_array(%w(below_threshold unavailable))
+  end
+
   context "conditional validations" do
     context "cta_reserve_fee_url is set" do
       before {allow(subject).to receive(:cta_reserve_fee_url).and_return("something.com")}
