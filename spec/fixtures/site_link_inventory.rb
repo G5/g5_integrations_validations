@@ -1,7 +1,9 @@
 class SiteLinkInventory
 
   include G5IntegrationsValidations::SiteLinkInventoryValidations
+  include G5IntegrationsValidations::SiteLinkInventoryPresenceValidations
   include Virtus.model
+
   attribute :in_store_rate_basis, String
   attribute :web_rate_basis, String
   attribute :unit_availability_threshold, Integer
