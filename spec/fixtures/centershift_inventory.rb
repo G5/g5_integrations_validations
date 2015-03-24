@@ -1,6 +1,7 @@
 class CentershiftInventory
 
   include G5IntegrationsValidations::CentershiftInventoryValidations
+  include G5IntegrationsValidations::CentershiftCtaUrlValidations
   include Virtus.model
   attribute :in_store_rate_basis, String
   attribute :web_rate_basis, String
