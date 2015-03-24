@@ -7,12 +7,6 @@ module G5IntegrationsValidations
 
     it { is_expected.to validate_presence_of(:in_store_rate_basis) }
     it { is_expected.to validate_presence_of(:web_rate_basis) }
-    it do
-      is_expected.to validate_presence_of(:cta_hard_reservation_with_fee_url)
-    end
-    it { is_expected.to validate_presence_of(:cta_hard_reservation_url) }
-    it { is_expected.to validate_presence_of(:cta_soft_reservation_url) }
-    it { is_expected.to validate_presence_of(:cta_quote_url) }
 
     it do
       is_expected.

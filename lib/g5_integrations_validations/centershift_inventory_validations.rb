@@ -29,14 +29,6 @@ module G5IntegrationsValidations
         web_rate_bases: VALID_WEB_RATE_BASES,
       )
 
-      validates(
-        :cta_hard_reservation_with_fee_url,
-        :cta_hard_reservation_url,
-        :cta_soft_reservation_url,
-        :cta_quote_url,
-        presence: true
-      )
-
       validates :unit_availability_threshold, presence: true
       validates(:unit_availability_cta_in_and_above_threshold, {
         presence: true,

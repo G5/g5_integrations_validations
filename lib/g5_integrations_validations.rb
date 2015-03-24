@@ -1,6 +1,7 @@
 require "active_model"
 require "g5_integrations_validations/version"
 require "g5_integrations_validations/centershift_inventory_validations"
+require "g5_integrations_validations/centershift_cta_url_validations"
 require "g5_integrations_validations/site_link_inventory_validations"
 require "g5_integrations_validations/site_link_inventory_presence_validations"
 require "g5_integrations_validations/site_link_lead_validations"
