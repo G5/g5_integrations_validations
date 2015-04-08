@@ -1,7 +1,8 @@
 class SiteLinkInventory
 
   include G5IntegrationsValidations::SiteLinkInventoryValidations
-  include G5IntegrationsValidations::SiteLinkInventoryPresenceValidations
+  include G5IntegrationsValidations::SiteLinkInventoryCtaThresholdValidations
+  include G5IntegrationsValidations::SiteLinkInventoryCtaUrlValidations
   include Virtus.model
 
   attribute :in_store_rate_basis, String
