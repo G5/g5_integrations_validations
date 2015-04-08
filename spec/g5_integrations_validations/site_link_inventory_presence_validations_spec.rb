@@ -11,10 +11,10 @@ describe G5IntegrationsValidations::SiteLinkInventoryPresenceValidations do
 
   it { is_expected.to validate_presence_of(:unit_availability_threshold) }
 
-  it { is_expected.to validate_presence_of(:cta_quote_url) }
+  it { is_expected.to validate_presence_of(:cta_inquiry_url) }
   it { is_expected.to validate_presence_of(:cta_rent_now_url) }
-  it { is_expected.to validate_presence_of(:cta_reserve_url) }
-  it { is_expected.to validate_presence_of(:cta_reserve_fee_url) }
+  it { is_expected.to validate_presence_of(:cta_reservation_url) }
+  it { is_expected.to validate_presence_of(:cta_reservation_with_fee_url) }
 
   it do
     is_expected.
@@ -22,17 +22,17 @@ describe G5IntegrationsValidations::SiteLinkInventoryPresenceValidations do
   end
 
   context "conditional validations" do
-    context "cta_reserve_fee_url is set" do
-      before {allow(subject).to receive(:cta_reserve_fee_url).and_return("something.com")}
-      it "allows a cta_reserve_url to be nil if cta_reserve_fee_url is not" do
-        is_expected.to_not validate_presence_of(:cta_reserve_url)
+    context "cta_reservation_with_fee_url is set" do
+      before {allow(subject).to receive(:cta_reservation_with_fee_url).and_return("something.com")}
+      it "allows a cta_reservation_url to be nil if cta_reservation_with_fee_url is not" do
+        is_expected.to_not validate_presence_of(:cta_reservation_url)
       end
     end
 
-    context "cta_reserve_url is set" do
-      before {allow(subject).to receive(:cta_reserve_url).and_return("something.com")}
-      it "allows a cta_reserve_fee_url to be nil if cta_reserve_url is not" do
-        is_expected.to_not validate_presence_of(:cta_reserve_fee_url)
+    context "cta_reservation_url is set" do
+      before {allow(subject).to receive(:cta_reservation_url).and_return("something.com")}
+      it "allows a cta_reservation_with_fee_url to be nil if cta_reservation_url is not" do
+        is_expected.to_not validate_presence_of(:cta_reservation_with_fee_url)
       end
     end
   end

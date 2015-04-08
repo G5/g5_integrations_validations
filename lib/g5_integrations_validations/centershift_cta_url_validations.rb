@@ -7,10 +7,10 @@ module G5IntegrationsValidations
       include ActiveModel::Validations
 
       validates(
-        :cta_hard_reservation_with_fee_url,
-        :cta_hard_reservation_url,
-        :cta_soft_reservation_url,
-        :cta_quote_url,
+        :cta_reservation_with_fee_url,
+        :cta_reservation_url,
+        :cta_hold_url,
+        :cta_inquiry_url,
         presence: true
       )
     end
