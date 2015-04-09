@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe G5IntegrationsValidations::SiteLinkInventoryPresenceValidations do
+describe G5IntegrationsValidations::SiteLinkInventoryCtaUrlValidations do
 
   subject do
     SiteLinkInventory.new(
@@ -9,17 +9,10 @@ describe G5IntegrationsValidations::SiteLinkInventoryPresenceValidations do
     )
   end
 
-  it { is_expected.to validate_presence_of(:unit_availability_threshold) }
-
   it { is_expected.to validate_presence_of(:cta_inquiry_url) }
   it { is_expected.to validate_presence_of(:cta_rent_now_url) }
   it { is_expected.to validate_presence_of(:cta_reservation_url) }
   it { is_expected.to validate_presence_of(:cta_reservation_with_fee_url) }
-
-  it do
-    is_expected.
-      to validate_presence_of(:unit_availability_cta_in_and_above_threshold)
-  end
 
   context "conditional validations" do
     context "cta_reservation_with_fee_url is set" do
