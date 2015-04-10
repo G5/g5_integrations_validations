@@ -11,7 +11,7 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
   it do
     is_expected.
       to validate_inclusion_of(:unit_availability_cta_in_and_above_threshold).
-      in_array(['quote', 'reserve', 'rent_now'])
+      in_array(['quote', 'reserve', 'rent_now', 'rent_now_or_reserve', 'rent_now_or_reserve_fee'])
   end
   it do
     is_expected.
