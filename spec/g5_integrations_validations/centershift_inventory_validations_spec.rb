@@ -15,7 +15,7 @@ module G5IntegrationsValidations
     it do
       is_expected.
         to validate_inclusion_of(:unit_availability_cta_in_and_above_threshold).
-        in_array(%w(soft_reservation hard_reservation quote))
+        in_array(%w(soft_reservation hard_reservation inquiry))
     end
     it do
       is_expected.
@@ -25,7 +25,7 @@ module G5IntegrationsValidations
           "soft_reservation",
           "hard_reservation_with_fee",
           "hard_reservation",
-          "quote",
+          "inquiry",
         ])
     end
   end

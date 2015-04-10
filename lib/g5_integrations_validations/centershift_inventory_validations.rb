@@ -17,7 +17,7 @@ module G5IntegrationsValidations
       "hard_reservation_with_fee",
       "hard_reservation",
       "soft_reservation",
-      "quote",
+      "inquiry",
     ]
 
     extend ActiveSupport::Concern
