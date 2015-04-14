@@ -1,10 +1,12 @@
-module G5IntegrationsValidations::SiteLinkInventoryPresenceValidations
+module G5IntegrationsValidations
+  module SiteLinkInventoryPresenceValidations
 
-  extend ActiveSupport::Concern
+    extend ActiveSupport::Concern
 
-  included do
-    include G5IntegrationsValidations::SiteLinkInventoryCtaThresholdValidations
-    include G5IntegrationsValidations::SiteLinkInventoryCtaUrlValidations
+    included do
+      include SiteLinkInventoryCtaThresholdValidations
+      include SiteLinkInventoryCtaUrlValidations
+    end
+
   end
-
 end
