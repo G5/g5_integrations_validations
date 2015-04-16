@@ -7,7 +7,6 @@ require "g5_integrations_validations/site_link_inventory_cta_threshold_validatio
 require "g5_integrations_validations/site_link_inventory_cta_url_validations"
 require "g5_integrations_validations/site_link_inventory_presence_validations"
 require "g5_integrations_validations/site_link_lead_validations"
-require "g5_integrations_validations/site_link_lead_rent_now_validations"
 require "g5_integrations_validations/rate_validations"
 require "g5_integrations_validations/yardi_voyager_lead_validations"
 
