@@ -1,3 +1,7 @@
+# TBA
+
+- Added YardiVoyagerInventoryValidations
+
 # 1.0.1
 
 - Fix dependency:
