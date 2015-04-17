@@ -9,6 +9,7 @@ require "g5_integrations_validations/site_link_inventory_presence_validations"
 require "g5_integrations_validations/site_link_lead_validations"
 require "g5_integrations_validations/rate_validations"
 require "g5_integrations_validations/yardi_voyager_lead_validations"
+require "g5_integrations_validations/yardi_voyager_inventory_validations"
 
 module G5IntegrationsValidations
 end
