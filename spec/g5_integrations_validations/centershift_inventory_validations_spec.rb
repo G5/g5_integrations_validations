@@ -15,18 +15,18 @@ module G5IntegrationsValidations
     it do
       is_expected.
         to validate_inclusion_of(:unit_availability_cta_in_and_above_threshold).
-        in_array(%w(soft_reservation hard_reservation inquiry))
+        in_array([
+          "rent_now",
+          "hold",
+          "reservation_with_fee",
+          "reservation",
+          "inquiry",
+        ])
     end
     it do
       is_expected.
         to validate_inclusion_of(:unit_availability_cta_below_threshold).
-        in_array([
-          "rent_now",
-          "soft_reservation",
-          "hard_reservation_with_fee",
-          "hard_reservation",
-          "inquiry",
-        ])
+        in_array(%w(hold reservation inquiry))
     end
   end
 end
