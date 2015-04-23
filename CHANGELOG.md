@@ -1,3 +1,7 @@
+# 1.3.0
+
+- Use new CTA values for Centershift
+
 # 1.2.1
 
 - Removed unused YardiVoyagerInventoryValidations (originating_lead_source, reasons)
