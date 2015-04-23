@@ -14,9 +14,9 @@ module G5IntegrationsValidations
     VALID_WEB_RATE_BASES = VALID_RATE_BASES + ['calculated_from_in_store_rate']
     CTAS_THRESHOLD_OPTIONS = [
       "rent_now",
-      "hard_reservation_with_fee",
-      "hard_reservation",
-      "soft_reservation",
+      "hold",
+      "reservation_with_fee",
+      "reservation",
       "inquiry",
     ]
 
