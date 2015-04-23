@@ -1,3 +1,7 @@
+# 1.2.1
+
+- Removed unused YardiVoyagerInventoryValidations (originating_lead_source, reasons)
+
 # 1.2.0
 
 - Added YardiVoyagerInventoryValidations
