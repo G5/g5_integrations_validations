@@ -8,11 +8,9 @@ module G5IntegrationsValidations
       validates(
         :api_version,
         :database,
-        :reasons,
         :interface_entity,
         :platform,
         :server_name,
-        :originating_lead_source,
         presence: true
       )
     end
