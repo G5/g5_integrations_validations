@@ -1,3 +1,7 @@
+# TBA
+
+- Add cta_reservation_url for YardiVoyagerInventory
+
 # 1.3.1
 
 - Add cta and threshold validations for YardiVoyagerInventory

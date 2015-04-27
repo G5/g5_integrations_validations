@@ -10,6 +10,7 @@ module G5IntegrationsValidations
     it { is_expected.to validate_presence_of(:interface_entity) }
     it { is_expected.to validate_presence_of(:platform) }
     it { is_expected.to validate_presence_of(:server_name) }
+    it { is_expected.to validate_presence_of(:cta_reservation_url) }
 
     it do
       is_expected.
