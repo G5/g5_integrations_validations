@@ -1,3 +1,7 @@
+# 1.3.1
+
+- Add cta and threshold validations for YardiVoyagerInventory
+
 # 1.3.0
 
 - Use new CTA values for Centershift
