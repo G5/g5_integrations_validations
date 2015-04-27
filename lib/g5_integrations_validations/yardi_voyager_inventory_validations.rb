@@ -14,6 +14,7 @@ module G5IntegrationsValidations
         :interface_entity,
         :platform,
         :server_name,
+        :cta_reservation_url,
         presence: true
       )
 
