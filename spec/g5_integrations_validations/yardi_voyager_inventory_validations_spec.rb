@@ -11,5 +11,16 @@ module G5IntegrationsValidations
     it { is_expected.to validate_presence_of(:platform) }
     it { is_expected.to validate_presence_of(:server_name) }
 
+    it do
+      is_expected.
+        to validate_inclusion_of(:unit_availability_cta_in_and_above_threshold).
+        in_array(%w(reservation))
+    end
+
+    it do
+      is_expected.
+        to validate_inclusion_of(:unit_availability_cta_below_threshold).
+        in_array(%w(call))
+    end
   end
 end
