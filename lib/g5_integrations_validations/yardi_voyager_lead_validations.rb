@@ -1,6 +1,5 @@
 module G5IntegrationsValidations
   module YardiVoyagerLeadValidations
-
     extend ActiveSupport::Concern
 
     included do

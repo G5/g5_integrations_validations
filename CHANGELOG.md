@@ -1,3 +1,7 @@
+# TBA
+
+- Split CTA validations and Inventory credential validations for YardiVoyagerInventory
+
 # 1.3.2
 
 - Add cta_reservation_url for YardiVoyagerInventory
