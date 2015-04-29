@@ -1,5 +1,7 @@
 class YardiVoyagerInventory
 
+  include G5IntegrationsValidations::YardiVoyagerInventoryCtaUrlValidations
+  include G5IntegrationsValidations::YardiVoyagerInventoryCtaThresholdValidations
   include G5IntegrationsValidations::YardiVoyagerInventoryValidations
   include Virtus.model
   attribute :api_version, String

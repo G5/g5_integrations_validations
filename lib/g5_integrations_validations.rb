@@ -10,6 +10,8 @@ require "g5_integrations_validations/site_link_lead_validations"
 require "g5_integrations_validations/rate_validations"
 require "g5_integrations_validations/yardi_voyager_lead_validations"
 require "g5_integrations_validations/yardi_voyager_inventory_validations"
+require "g5_integrations_validations/yardi_voyager_inventory_cta_threshold_validations"
+require "g5_integrations_validations/yardi_voyager_inventory_cta_url_validations"
 
 module G5IntegrationsValidations
 end
