@@ -1,4 +1,4 @@
-# TBA
+# 1.3.3
 
 - Split CTA validations and Inventory credential validations for YardiVoyagerInventory
 
