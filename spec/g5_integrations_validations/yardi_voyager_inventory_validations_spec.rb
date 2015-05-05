@@ -23,5 +23,17 @@ module G5IntegrationsValidations
         to validate_inclusion_of(:unit_availability_cta_below_threshold).
         in_array(%w(call))
     end
+
+    it do
+      is_expected.
+        to validate_inclusion_of(:starting_rate_source).
+        in_array(%w(vendor_starting_rate))
+    end
+
+    it do
+      is_expected.
+        to validate_inclusion_of(:starting_rate_source).
+        in_array(%w(available_starting_rate))
+    end
   end
 end
