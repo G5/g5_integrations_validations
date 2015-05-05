@@ -15,6 +15,7 @@ module G5IntegrationsValidations
       validates(:unit_availability_cta_below_threshold, {
         inclusion: {in: CTAS_FOR_BELOW_THRESHOLD}
       })
+
     end
   end
 
