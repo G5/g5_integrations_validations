@@ -1,3 +1,7 @@
+# 1.5.0
+
+Added YardiVoyagerInventoryRateToDisplayValidations
+
 # 1.4.0
 
 Added starting rate source inventory validations for YardiVoyagerInventory
