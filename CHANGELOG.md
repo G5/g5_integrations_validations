@@ -1,3 +1,11 @@
+# 1.5.0
+
+Added YardiVoyagerInventoryRateToDisplayValidations
+
+# 1.4.0
+
+Added starting rate source inventory validations for YardiVoyagerInventory
+
 # 1.3.3
 
 - Split CTA validations and Inventory credential validations for YardiVoyagerInventory
