@@ -26,13 +26,13 @@ module G5IntegrationsValidations
 
     it do
       is_expected.
-        to validate_inclusion_of(:starting_rate_source).
+        to validate_inclusion_of(:rate_source).
         in_array(%w(vendor_starting_rate))
     end
 
     it do
       is_expected.
-        to validate_inclusion_of(:starting_rate_source).
+        to validate_inclusion_of(:rate_source).
         in_array(%w(available_starting_rate))
     end
   end

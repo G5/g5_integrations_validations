@@ -1,5 +1,5 @@
 module G5IntegrationsValidations
-  module YardiVoyagerInventoryStartingRateSourceValidations
+  module YardiVoyagerInventoryRateSourceValidations
     extend ActiveSupport::Concern
 
     STARTING_RATE_SOURCE = %w(vendor_starting_rate available_starting_rate)
@@ -7,7 +7,7 @@ module G5IntegrationsValidations
     included do
       include ActiveModel::Validations
 
-      validates(:starting_rate_source, {
+      validates(:rate_source, {
         inclusion: {in: STARTING_RATE_SOURCE}
       })
     end
