@@ -1,3 +1,7 @@
+# 1.5.1
+
+Changed StartingRateSource to RateSource
+
 # 1.5.0
 
 Added YardiVoyagerInventoryRateToDisplayValidations
