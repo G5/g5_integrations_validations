@@ -10,31 +10,6 @@ module G5IntegrationsValidations
     it { is_expected.to validate_presence_of(:interface_entity) }
     it { is_expected.to validate_presence_of(:platform) }
     it { is_expected.to validate_presence_of(:server_name) }
-    it { is_expected.to validate_presence_of(:cta_reservation_url) }
-
-    it do
-      is_expected.
-        to validate_inclusion_of(:unit_availability_cta_in_and_above_threshold).
-        in_array(%w(reservation))
-    end
-
-    it do
-      is_expected.
-        to validate_inclusion_of(:unit_availability_cta_below_threshold).
-        in_array(%w(call))
-    end
-
-    it do
-      is_expected.
-        to validate_inclusion_of(:rate_source).
-        in_array(%w(vendor_starting_rate))
-    end
-
-    it do
-      is_expected.
-        to validate_inclusion_of(:rate_source).
-        in_array(%w(available_starting_rate))
-    end
 
     it { is_expected.to validate_presence_of(:rate_to_display) }
     it do
