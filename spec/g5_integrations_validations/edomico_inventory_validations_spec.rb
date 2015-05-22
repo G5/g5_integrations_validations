@@ -23,11 +23,6 @@ module G5IntegrationsValidations
         to validate_inclusion_of(:unit_availability_cta_below_threshold).
         in_array(%w(call))
     end
-    it do
-      is_expected.to validate_presence_of(:cta_reservation_with_deposit_url)
-    end
-    it do
-      is_expected.to validate_presence_of(:cta_reservation_without_deposit_url)
-    end
+
   end
 end
