@@ -1,8 +1,8 @@
 module G5IntegrationsValidations
   module EdomicoInventoryValidations
     CTAS_ABOVE_THRESHOLD_OPTIONS = [
-      "reservation_with_deposit",
-      "reservation_without_deposit",
+      "reservation_with_fee",
+      "reservation",
     ]
 
     CTAS_BELOW_THRESHOLD_OPTIONS = ["call"]
