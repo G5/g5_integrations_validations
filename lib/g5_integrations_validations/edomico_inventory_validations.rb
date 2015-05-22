@@ -21,8 +21,6 @@ module G5IntegrationsValidations
         inclusion: {in: CTAS_BELOW_THRESHOLD_OPTIONS},
         allow_blank: true
       })
-      validates :cta_reservation_with_deposit_url, presence: true
-      validates :cta_reservation_without_deposit_url, presence: true
 
     end
   end
