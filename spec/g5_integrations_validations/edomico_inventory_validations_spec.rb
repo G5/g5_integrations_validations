@@ -16,7 +16,7 @@ module G5IntegrationsValidations
     it do
       is_expected.
         to validate_inclusion_of(:unit_availability_cta_in_and_above_threshold).
-        in_array(%w(reservation_with_deposit reservation_without_deposit))
+        in_array(%w(reservation_with_fee reservation))
     end
     it do
       is_expected.
