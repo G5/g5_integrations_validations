@@ -39,6 +39,14 @@ module G5IntegrationsValidations
         inclusion: {in: CTAS_THRESHOLD_OPTIONS},
         allow_blank: true
       })
+      validates(:unit_availability_cta_2_in_and_above_threshold, {
+        inclusion: {in: CTAS_THRESHOLD_OPTIONS},
+        allow_blank: true
+      })
+      validates(:unit_availability_cta_2_below_threshold, {
+        inclusion: {in: CTAS_THRESHOLD_OPTIONS},
+        allow_blank: true
+      })
 
     end
   end
