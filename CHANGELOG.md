@@ -8,6 +8,11 @@ Added unit_availability_cta_2_below_threshold validations
 
 Added RealPage settings validations
 
+# 1.7.0
+
+- Add Centershift call threshold to options
+- Add Centershift "CTA 2" validations
+
 # 1.5.1
 
 Changed StartingRateSource to RateSource
