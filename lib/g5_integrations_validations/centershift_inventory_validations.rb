@@ -18,6 +18,7 @@ module G5IntegrationsValidations
       "reservation_with_fee",
       "reservation",
       "inquiry",
+      "call",
     ]
 
     extend ActiveSupport::Concern
@@ -35,6 +36,14 @@ module G5IntegrationsValidations
         inclusion: {in: CTAS_THRESHOLD_OPTIONS}
       })
       validates(:unit_availability_cta_below_threshold, {
+        inclusion: {in: CTAS_THRESHOLD_OPTIONS},
+        allow_blank: true
+      })
+      validates(:unit_availability_cta_2_in_and_above_threshold, {
+        inclusion: {in: CTAS_THRESHOLD_OPTIONS},
+        allow_blank: true
+      })
+      validates(:unit_availability_cta_2_below_threshold, {
         inclusion: {in: CTAS_THRESHOLD_OPTIONS},
         allow_blank: true
       })

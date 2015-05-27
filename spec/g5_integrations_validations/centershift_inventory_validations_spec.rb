@@ -26,7 +26,24 @@ module G5IntegrationsValidations
     it do
       is_expected.
         to validate_inclusion_of(:unit_availability_cta_below_threshold).
-        in_array(%w(hold reservation inquiry))
+        in_array(%w(hold reservation inquiry call))
+    end
+
+    it do
+      is_expected.
+        to validate_inclusion_of(:unit_availability_cta_2_in_and_above_threshold).
+        in_array([
+          "rent_now",
+          "hold",
+          "reservation_with_fee",
+          "reservation",
+          "inquiry",
+        ]).allow_blank(true)
+    end
+    it do
+      is_expected.
+        to validate_inclusion_of(:unit_availability_cta_2_below_threshold).
+        in_array(%w(hold reservation inquiry call))
     end
   end
 end
