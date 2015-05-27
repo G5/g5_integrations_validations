@@ -18,6 +18,7 @@ module G5IntegrationsValidations
       "reservation_with_fee",
       "reservation",
       "inquiry",
+      "call",
     ]
 
     extend ActiveSupport::Concern

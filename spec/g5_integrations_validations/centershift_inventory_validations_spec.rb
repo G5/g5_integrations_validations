@@ -26,7 +26,7 @@ module G5IntegrationsValidations
     it do
       is_expected.
         to validate_inclusion_of(:unit_availability_cta_below_threshold).
-        in_array(%w(hold reservation inquiry))
+        in_array(%w(hold reservation inquiry call))
     end
   end
 end
