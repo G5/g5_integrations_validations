@@ -1,3 +1,8 @@
+# 1.7.0
+
+- Add Centershift call threshold to options
+- Add Centershift "CTA 2" validations
+
 # 1.5.1
 
 Changed StartingRateSource to RateSource
