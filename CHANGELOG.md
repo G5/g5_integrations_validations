@@ -1,3 +1,7 @@
+# 1.7.2
+
+Added RealPage settings validations
+
 # 1.5.1
 
 Changed StartingRateSource to RateSource
