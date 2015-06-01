@@ -23,6 +23,16 @@ module G5IntegrationsValidations
         to validate_inclusion_of(:unit_availability_cta_below_threshold).
         in_array(%w(call))
     end
+    it do
+      is_expected.
+        to validate_inclusion_of(:unit_availability_cta_2_in_and_above_threshold).
+        in_array(%w(reservation))
+    end
+    it do
+      is_expected.
+        to validate_inclusion_of(:unit_availability_cta_2_below_threshold).
+        in_array(%w(call))
+    end
 
   end
 end
