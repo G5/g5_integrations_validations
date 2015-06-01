@@ -7,14 +7,6 @@ module G5IntegrationsValidations
 
     it do
       is_expected.
-        to validate_presence_of(:pmc_id)
-    end
-    it do
-      is_expected.
-        to validate_presence_of(:site_id)
-    end
-    it do
-      is_expected.
         to validate_presence_of(:unit_availability_threshold)
     end
     it do

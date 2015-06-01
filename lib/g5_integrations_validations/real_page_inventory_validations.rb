@@ -13,12 +13,6 @@ module G5IntegrationsValidations
     included do
       include ActiveModel::Validations
 
-      validates(
-        :pmc_id,
-        :site_id,
-        presence: true
-      )
-
       validates :unit_availability_threshold, presence: true
       validates(:unit_availability_cta_in_and_above_threshold, {
         presence: true,
