@@ -1,3 +1,9 @@
+# 1.7.2
+
+Modified RealPage validations
+Added unit_availability_cta_2_in_and_above_threshold validations
+Added unit_availability_cta_2_below_threshold validations
+
 # 1.7.1
 
 Added RealPage settings validations
