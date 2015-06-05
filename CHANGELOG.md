@@ -1,3 +1,7 @@
+# 1.8.0
+
+- `unit_availability_cta_2_in_and_above_threshold` and `unit_availability_cta_below_threshold` are always required and have all options
+
 # 1.7.2
 
 Modified RealPage validations
