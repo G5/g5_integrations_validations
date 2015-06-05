@@ -33,11 +33,11 @@ module G5IntegrationsValidations
       validates :unit_availability_threshold, presence: true
       validates(:unit_availability_cta_in_and_above_threshold, {
         presence: true,
-        inclusion: {in: CTAS_THRESHOLD_OPTIONS}
+        inclusion: {in: CTAS_THRESHOLD_OPTIONS},
       })
       validates(:unit_availability_cta_below_threshold, {
         inclusion: {in: CTAS_THRESHOLD_OPTIONS},
-        allow_blank: true
+        presence: true,
       })
       validates(:unit_availability_cta_2_in_and_above_threshold, {
         inclusion: {in: CTAS_THRESHOLD_OPTIONS},
