@@ -25,29 +25,13 @@ module G5IntegrationsValidations
 
     included do
       include ActiveModel::Validations
+      include InventoryCtaValidations.model(ctas: CTAS_THRESHOLD_OPTIONS)
       include G5IntegrationsValidations::RateValidations.model(
         in_store_rate_bases: VALID_IN_STORE_RATE_BASES,
         web_rate_bases: VALID_WEB_RATE_BASES,
       )
 
       validates :unit_availability_threshold, presence: true
-      validates(:unit_availability_cta_in_and_above_threshold, {
-        presence: true,
-        inclusion: {in: CTAS_THRESHOLD_OPTIONS},
-      })
-      validates(:unit_availability_cta_below_threshold, {
-        inclusion: {in: CTAS_THRESHOLD_OPTIONS},
-        presence: true,
-      })
-      validates(:unit_availability_cta_2_in_and_above_threshold, {
-        inclusion: {in: CTAS_THRESHOLD_OPTIONS},
-        allow_blank: true
-      })
-      validates(:unit_availability_cta_2_below_threshold, {
-        inclusion: {in: CTAS_THRESHOLD_OPTIONS},
-        allow_blank: true
-      })
-
     end
   end
 end
