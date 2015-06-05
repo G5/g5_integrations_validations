@@ -16,5 +16,7 @@ class SiteLinkInventory
   attribute :cta_rent_now_url, String
   attribute :unit_availability_cta_in_and_above_threshold, String
   attribute :unit_availability_cta_below_threshold, String
+  attribute :unit_availability_cta_2_in_and_above_threshold, String
+  attribute :unit_availability_cta_2_below_threshold, String
 
 end
