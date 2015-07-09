@@ -1,3 +1,7 @@
+# TBA
+
+- Yardi RentCafe validations
+
 # 1.8.1
 
 - Refactor RealPage CTA settings

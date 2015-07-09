@@ -17,6 +17,7 @@ require "g5_integrations_validations/yardi_voyager_inventory_rate_source_validat
 require "g5_integrations_validations/yardi_voyager_inventory_rate_to_display_validations"
 require "g5_integrations_validations/real_page_inventory_validations"
 require "g5_integrations_validations/inventory_cta_validations"
+require "g5_integrations_validations/yardi_rent_cafe_inventory_rate_to_display_validations"
 
 module G5IntegrationsValidations
 end
