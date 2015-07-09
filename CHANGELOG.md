@@ -1,4 +1,4 @@
-# TBA
+# 1.9.0
 
 - Yardi RentCafe validations
 
