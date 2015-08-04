@@ -1,4 +1,4 @@
-# TBA
+# 2.0.0
 
 - Breaking change: merge `YardiRentCafeInventoryRateToDisplayValidations` and `YardiVoyagerInventoryRateToDisplayValidations` into `MultiFamilyInventoryRateToDisplayValidations`
 
