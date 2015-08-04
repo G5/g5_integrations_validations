@@ -1,5 +1,5 @@
 module G5IntegrationsValidations
-  module YardiVoyagerInventoryRateToDisplayValidations
+  module MultiFamilyInventoryRateToDisplayValidations
     extend ActiveSupport::Concern
 
     VALID_OPTIONS = %w(starting_rate starting_and_ending_rates none)

@@ -4,7 +4,7 @@ class YardiVoyagerInventory
   include G5IntegrationsValidations::YardiVoyagerInventoryCtaThresholdValidations
   include G5IntegrationsValidations::YardiVoyagerInventoryRateSourceValidations
   include G5IntegrationsValidations::YardiVoyagerInventoryValidations
-  include G5IntegrationsValidations::YardiVoyagerInventoryRateToDisplayValidations
+  include G5IntegrationsValidations::MultiFamilyInventoryRateToDisplayValidations
   include Virtus.model
   attribute :api_version, String
   attribute :database, String
