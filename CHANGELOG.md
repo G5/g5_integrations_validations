@@ -1,4 +1,4 @@
-# TBA
+# 3.0.0
 
 - Breaking change: rename `YardiVoyagerInventoryRateSourceValidations` to `MultiFamilyInventoryRateSourceValidations`
 
