@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "virtus"
   spec.add_development_dependency "shoulda-matchers", "~> 2.7"
+  spec.add_development_dependency "gemfury_helpers"
 end
