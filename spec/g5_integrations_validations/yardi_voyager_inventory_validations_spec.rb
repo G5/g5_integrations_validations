@@ -12,9 +12,5 @@ module G5IntegrationsValidations
     it { is_expected.to validate_presence_of(:server_name) }
 
     it { is_expected.to validate_presence_of(:rate_to_display) }
-    it do
-      is_expected.to validate_inclusion_of(:rate_to_display).
-        in_array(YardiVoyagerInventoryRateToDisplayValidations::VALID_OPTIONS)
-    end
   end
 end

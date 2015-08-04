@@ -2,7 +2,7 @@ class YardiRentCafeInventory
   include G5IntegrationsValidations::YardiRentCafeInventoryCtaUrlValidations
   include G5IntegrationsValidations::YardiRentCafeInventoryCtaThresholdValidations
   include G5IntegrationsValidations::YardiRentCafeInventoryValidations
-  include G5IntegrationsValidations::YardiVoyagerInventoryRateToDisplayValidations
+  include G5IntegrationsValidations::MultiFamilyInventoryRateToDisplayValidations
   include Virtus.model
 
   attribute :cta_inquiry_url, String

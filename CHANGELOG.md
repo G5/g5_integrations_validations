@@ -1,3 +1,7 @@
+# TBA
+
+- Breaking change: merge `YardiRentCafeInventoryRateToDisplayValidations` and `YardiVoyagerInventoryRateToDisplayValidations` into `MultiFamilyInventoryRateToDisplayValidations`
+
 # 1.9.0
 
 - Yardi RentCafe validations
