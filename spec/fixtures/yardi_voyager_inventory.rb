@@ -2,7 +2,7 @@ class YardiVoyagerInventory
 
   include G5IntegrationsValidations::YardiVoyagerInventoryCtaUrlValidations
   include G5IntegrationsValidations::YardiVoyagerInventoryCtaThresholdValidations
-  include G5IntegrationsValidations::YardiVoyagerInventoryRateSourceValidations
+  include G5IntegrationsValidations::MultiFamilyInventoryRateSourceValidations
   include G5IntegrationsValidations::YardiVoyagerInventoryValidations
   include G5IntegrationsValidations::MultiFamilyInventoryRateToDisplayValidations
   include Virtus.model
