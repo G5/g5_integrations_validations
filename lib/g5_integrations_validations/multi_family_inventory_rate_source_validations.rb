@@ -1,5 +1,5 @@
 module G5IntegrationsValidations
-  module YardiVoyagerInventoryRateSourceValidations
+  module MultiFamilyInventoryRateSourceValidations
     extend ActiveSupport::Concern
 
     RATE_SOURCE = %w(vendor_rate available_rate)

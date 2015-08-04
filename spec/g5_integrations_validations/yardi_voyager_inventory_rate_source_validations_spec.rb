@@ -1,7 +1,7 @@
 require "spec_helper"
 
 module G5IntegrationsValidations
-  describe YardiVoyagerInventoryRateSourceValidations do
+  describe MultiFamilyInventoryRateSourceValidations do
 
     subject { YardiVoyagerInventory.new }
 

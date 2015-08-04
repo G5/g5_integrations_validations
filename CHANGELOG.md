@@ -1,3 +1,7 @@
+# TBA
+
+- Breaking change: rename `YardiVoyagerInventoryRateSourceValidations` to `MultiFamilyInventoryRateSourceValidations`
+
 # 2.0.0
 
 - Breaking change: merge `YardiRentCafeInventoryRateToDisplayValidations` and `YardiVoyagerInventoryRateToDisplayValidations` into `MultiFamilyInventoryRateToDisplayValidations`
