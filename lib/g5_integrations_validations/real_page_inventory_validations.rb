@@ -12,6 +12,10 @@ module G5IntegrationsValidations
       include InventoryCtaValidations.model(ctas: CTAS_THRESHOLD_OPTIONS)
 
       validates :unit_availability_threshold, presence: true
+      validates(:apartment_availability_basis, {
+        presence: true,
+        inclusion: { in: %w(all available) }
+      })
     end
 
   end
