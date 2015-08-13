@@ -1,3 +1,7 @@
+# TBA
+
+- Add validations for RealPage `apartment_availability_basis`
+
 # 3.0.0
 
 - Breaking change: rename `YardiVoyagerInventoryRateSourceValidations` to `MultiFamilyInventoryRateSourceValidations`
