@@ -8,6 +8,6 @@ class RealPageInventory
   attribute :unit_availability_cta_below_threshold, String
   attribute :unit_availability_cta_2_in_and_above_threshold, String
   attribute :unit_availability_cta_2_below_threshold, String
-  attribute :apartment_availability_basis, String
+  attribute :apartment_selection, String
 
 end

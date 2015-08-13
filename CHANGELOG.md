@@ -1,3 +1,7 @@
+# TBA
+
+- Rename RealPage `apartment_availability_basis` to `apartment_selection`
+
 # 4.0.0
 
 - Add validations for RealPage `apartment_availability_basis`
