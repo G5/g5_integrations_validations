@@ -34,10 +34,10 @@ module G5IntegrationsValidations
         in_array(%w(call))
     end
     it do
-      is_expected.to validate_presence_of(:apartment_availability_basis)
+      is_expected.to validate_presence_of(:apartment_selection)
     end
     it do
-      is_expected.to validate_inclusion_of(:apartment_availability_basis).
+      is_expected.to validate_inclusion_of(:apartment_selection).
         in_array(%w(all available))
     end
 
