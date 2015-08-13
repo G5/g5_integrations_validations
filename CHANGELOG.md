@@ -1,4 +1,4 @@
-# TBA
+# 5.0.0
 
 - Rename RealPage `apartment_availability_basis` to `apartment_selection`
 
