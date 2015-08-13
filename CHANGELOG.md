@@ -1,4 +1,4 @@
-# TBA
+# 4.0.0
 
 - Add validations for RealPage `apartment_availability_basis`
 
