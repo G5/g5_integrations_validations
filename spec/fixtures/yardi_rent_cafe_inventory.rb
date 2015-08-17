@@ -6,7 +6,7 @@ class YardiRentCafeInventory
   include Virtus.model
 
   attribute :cta_inquiry_url, String
-  attribute :unit_availability_threshold, String
+  attribute :unit_cta_availability_threshold, String
   attribute :unit_availability_cta_in_and_above_threshold, String
   attribute :unit_availability_cta_below_threshold, String
   attribute :rate_to_display, String

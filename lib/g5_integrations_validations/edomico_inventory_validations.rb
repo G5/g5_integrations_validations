@@ -13,7 +13,7 @@ module G5IntegrationsValidations
       include ActiveModel::Validations
       include InventoryCtaValidations.model(ctas: CTAS_THRESHOLD_OPTIONS)
 
-      validates :unit_availability_threshold, presence: true
+      validates :unit_cta_availability_threshold, presence: true
     end
 
   end

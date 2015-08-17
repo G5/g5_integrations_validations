@@ -9,6 +9,6 @@ describe G5IntegrationsValidations::SiteLinkInventoryCtaThresholdValidations do
     )
   end
 
-  it { is_expected.to validate_presence_of(:unit_availability_threshold) }
+  it { is_expected.to validate_presence_of(:unit_cta_availability_threshold) }
 
 end

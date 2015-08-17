@@ -31,7 +31,7 @@ module G5IntegrationsValidations
         web_rate_bases: VALID_WEB_RATE_BASES,
       )
 
-      validates :unit_availability_threshold, presence: true
+      validates :unit_cta_availability_threshold, presence: true
     end
   end
 end

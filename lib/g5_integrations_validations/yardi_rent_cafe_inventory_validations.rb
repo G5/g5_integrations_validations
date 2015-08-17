@@ -5,7 +5,7 @@ module G5IntegrationsValidations
     included do
       include ActiveModel::Validations
 
-      validates :unit_availability_threshold, presence: true
+      validates :unit_cta_availability_threshold, presence: true
 
     end
   end

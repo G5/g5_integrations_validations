@@ -28,32 +28,32 @@ describe G5IntegrationsValidations::SiteLinkInventoryValidations do
   end
 
   describe "unit_availability_cta_in_and_above_threshold" do
-    context "unit_availability_threshold is < 1" do
+    context "unit_cta_availability_threshold is < 1" do
       subject do
         SiteLinkInventory.new(
           unit_availability_cta_in_and_above_threshold: "rent_now",
-          unit_availability_threshold: 0,
+          unit_cta_availability_threshold: 0,
         )
       end
 
       specify do
-        is_expected.to validate_numericality_of(:unit_availability_threshold).
+        is_expected.to validate_numericality_of(:unit_cta_availability_threshold).
           is_greater_than_or_equal_to(1).
           with_message("must be greater than or equal to 1 when the `rent_now` CTA is chosen")
       end
     end
 
-    context "unit_availability_threshold is >= 1" do
+    context "unit_cta_availability_threshold is >= 1" do
       subject do
         SiteLinkInventory.new(
           unit_availability_cta_in_and_above_threshold: "rent_now",
-          unit_availability_threshold: 1,
+          unit_cta_availability_threshold: 1,
         )
       end
 
       specify do
         is_expected.
-          to_not validate_numericality_of(:unit_availability_threshold)
+          to_not validate_numericality_of(:unit_cta_availability_threshold)
       end
     end
   end
