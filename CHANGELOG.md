@@ -1,3 +1,7 @@
+# TBA
+
+- Rename `unit_availability_threshold` to `unit_cta_availability_threshold`
+
 # 5.0.0
 
 - Rename RealPage `apartment_availability_basis` to `apartment_selection`
