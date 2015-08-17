@@ -11,7 +11,7 @@ module G5IntegrationsValidations
 
     it do
       is_expected.
-        to validate_presence_of(:unit_availability_threshold)
+        to validate_presence_of(:unit_cta_availability_threshold)
     end
 
   end

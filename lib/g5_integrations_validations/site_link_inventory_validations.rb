@@ -25,7 +25,7 @@ module G5IntegrationsValidations::SiteLinkInventoryValidations
       web_rate_bases: VALID_WEB_RATE_BASES,
     )
 
-    validates(:unit_availability_threshold, {
+    validates(:unit_cta_availability_threshold, {
       numericality: {
         greater_than_or_equal_to: 1,
         message: "must be greater than or equal to 1 when the `rent_now` CTA is chosen",
