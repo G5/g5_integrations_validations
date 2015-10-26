@@ -1,3 +1,7 @@
+# TBA
+
+- Remove RealPage `apartment_selection` validations
+
 # 6.0.0
 
 - Rename `unit_availability_threshold` to `unit_cta_availability_threshold`
