@@ -1,4 +1,4 @@
-# TBA
+# 7.0.0
 
 - Remove RealPage `apartment_selection` validations
 
