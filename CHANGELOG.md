@@ -1,3 +1,7 @@
+# 7.1.1
+
+- Change `rent_now_or_quote` to `rent_now_or_inquiry` for consistency with inquiry CTA
+
 # 7.1.0
 
 - Add to possible SiteLink CTA values
