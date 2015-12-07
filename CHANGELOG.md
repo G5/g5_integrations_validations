@@ -1,4 +1,4 @@
-# TBA
+# 7.1.0
 
 - Add to possible SiteLink CTA values
 
