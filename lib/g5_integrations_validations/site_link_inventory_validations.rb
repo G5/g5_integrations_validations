@@ -11,7 +11,7 @@ module G5IntegrationsValidations::SiteLinkInventoryValidations
     'rent_now',
     'rent_now_or_reservation',
     'rent_now_or_reservation_with_fee',
-    "rent_now_or_quote",
+    "rent_now_or_inquiry",
     "rent_now_or_call",
   ]
 
