@@ -19,6 +19,8 @@ module G5IntegrationsValidations
       "reservation",
       "inquiry",
       "call",
+      "call_met",
+      "inquiry_met",
     ]
 
     extend ActiveSupport::Concern
