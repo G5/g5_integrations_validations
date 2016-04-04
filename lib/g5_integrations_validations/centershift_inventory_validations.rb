@@ -21,6 +21,7 @@ module G5IntegrationsValidations
       "call",
       "call_met",
       "inquiry_met",
+      "more_information",
     ]
 
     extend ActiveSupport::Concern
