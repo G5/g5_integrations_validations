@@ -1,3 +1,8 @@
+# 7.2.0
+
+- Add `more_information` CTA type
+- Add `call_met` and `inquiry_met` to CentershiftInventoryValidations::CTAS_THRESHOLD_OPTIONS
+
 # 7.1.1
 
 - Change `rent_now_or_quote` to `rent_now_or_inquiry` for consistency with inquiry CTA
