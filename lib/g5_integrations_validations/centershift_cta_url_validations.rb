@@ -11,6 +11,7 @@ module G5IntegrationsValidations
         :cta_reservation_url,
         :cta_hold_url,
         :cta_inquiry_url,
+        :cta_more_information_url,
         presence: true
       )
     end

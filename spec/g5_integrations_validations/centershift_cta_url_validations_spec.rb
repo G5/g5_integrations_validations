@@ -11,6 +11,7 @@ module G5IntegrationsValidations
     it { is_expected.to validate_presence_of(:cta_reservation_url) }
     it { is_expected.to validate_presence_of(:cta_hold_url) }
     it { is_expected.to validate_presence_of(:cta_inquiry_url) }
+    it { is_expected.to validate_presence_of(:cta_more_information_url) }
 
   end
 end
