@@ -1,4 +1,4 @@
-# TBA
+# 7.1.2
 
 - Add `contact_us` on `CTAS_THRESHOLD_OPTIONS`.
 
